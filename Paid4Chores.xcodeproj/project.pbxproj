@@ -54,14 +54,38 @@
 		9659A661207E8837004948A1 /* Paid4Chores */ = {
 			isa = PBXGroup;
 			children = (
-				9659A662207E8837004948A1 /* AppDelegate.swift */,
-				9659A664207E8837004948A1 /* ViewController.swift */,
-				9659A666207E8837004948A1 /* Main.storyboard */,
 				9659A669207E8838004948A1 /* Assets.xcassets */,
-				9659A66B207E8838004948A1 /* LaunchScreen.storyboard */,
 				9659A66E207E8838004948A1 /* Info.plist */,
+				9659A674207E88FE004948A1 /* Models */,
+				9659A676207E890E004948A1 /* Controllers */,
+				9659A675207E8906004948A1 /* Views */,
 			);
 			path = Paid4Chores;
+			sourceTree = "<group>";
+		};
+		9659A674207E88FE004948A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9659A675207E8906004948A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9659A66B207E8838004948A1 /* LaunchScreen.storyboard */,
+				9659A666207E8837004948A1 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9659A676207E890E004948A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9659A662207E8837004948A1 /* AppDelegate.swift */,
+				9659A664207E8837004948A1 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
