@@ -13,6 +13,7 @@
 		9659A668207E8837004948A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9659A666207E8837004948A1 /* Main.storyboard */; };
 		9659A66A207E8838004948A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9659A669207E8838004948A1 /* Assets.xcassets */; };
 		9659A66D207E8838004948A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9659A66B207E8838004948A1 /* LaunchScreen.storyboard */; };
+		96AF279D207EB03600EDB1DC /* ChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF279C207EB03600EDB1DC /* ChildCell.swift */; };
 		9BA43BAFC335967AE2C1B29E /* Pods_Paid4Chores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B6D443EAA4B2FEE8411CB5 /* Pods_Paid4Chores.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		9659A669207E8838004948A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9659A66C207E8838004948A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9659A66E207E8838004948A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96AF279C207EB03600EDB1DC /* ChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCell.swift; sourceTree = "<group>"; };
 		C2D72049AFB02B215A0D4F5F /* Pods-Paid4Chores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paid4Chores.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paid4Chores/Pods-Paid4Chores.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 			children = (
 				9659A662207E8837004948A1 /* AppDelegate.swift */,
 				9659A664207E8837004948A1 /* ViewController.swift */,
+				96AF279C207EB03600EDB1DC /* ChildCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				9659A665207E8837004948A1 /* ViewController.swift in Sources */,
 				9659A663207E8837004948A1 /* AppDelegate.swift in Sources */,
+				96AF279D207EB03600EDB1DC /* ChildCell.swift in Sources */,
 				961BD12E207E99AF00D7CF2A /* Child.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
