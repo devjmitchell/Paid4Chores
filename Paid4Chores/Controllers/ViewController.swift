@@ -44,7 +44,6 @@ class ViewController: UIViewController {
         
         let newChild = Child()
         newChild.name = named
-//        newChild.payment = 0.0
         
         do {
             try self.realm.write {

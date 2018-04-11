@@ -11,5 +11,5 @@ import RealmSwift
 
 class Child: Object {
     @objc dynamic var name: String = ""
-//    @objc dynamic var payment: Float = 0.0
+    @objc dynamic var payment: Float = 0.0
 }
