@@ -29,17 +29,8 @@ class ViewController: UIViewController {
         
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
             
-            let newChild = Child()
-            newChild.name = textField.text!
-            newChild.payment = 0.0
+            self.saveChild(named: textField.text!)
             
-            do {
-                try self.realm.write {
-                    self.realm.add(newChild)
-                }
-            } catch {
-                print("Error saving: \(error)")
-            }
         }
         
         alert.addTextField { (alertTextField) in
@@ -51,6 +42,21 @@ class ViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
         
+    }
+    
+    func saveChild(named: String) {
+        
+        let newChild = Child()
+        newChild.name = named
+        newChild.payment = 0.0
+        
+        do {
+            try self.realm.write {
+                self.realm.add(newChild)
+            }
+        } catch {
+            print("Error saving: \(error)")
+        }
     }
     
 }
