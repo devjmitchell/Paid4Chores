@@ -12,9 +12,12 @@
 		9659A668207E8837004948A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9659A666207E8837004948A1 /* Main.storyboard */; };
 		9659A66A207E8838004948A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9659A669207E8838004948A1 /* Assets.xcassets */; };
 		9659A66D207E8838004948A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9659A66B207E8838004948A1 /* LaunchScreen.storyboard */; };
+		9BA43BAFC335967AE2C1B29E /* Pods_Paid4Chores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B6D443EAA4B2FEE8411CB5 /* Pods_Paid4Chores.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00EB1F15002328E0C0387613 /* Pods-Paid4Chores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paid4Chores.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Paid4Chores/Pods-Paid4Chores.debug.xcconfig"; sourceTree = "<group>"; };
+		71B6D443EAA4B2FEE8411CB5 /* Pods_Paid4Chores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paid4Chores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9659A65F207E8837004948A1 /* Paid4Chores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paid4Chores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9659A662207E8837004948A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9659A664207E8837004948A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		9659A669207E8838004948A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9659A66C207E8838004948A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9659A66E207E8838004948A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D72049AFB02B215A0D4F5F /* Pods-Paid4Chores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paid4Chores.release.xcconfig"; path = "Pods/Target Support Files/Pods-Paid4Chores/Pods-Paid4Chores.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BA43BAFC335967AE2C1B29E /* Pods_Paid4Chores.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C7B0B8C83AF010C99FEF721 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00EB1F15002328E0C0387613 /* Pods-Paid4Chores.debug.xcconfig */,
+				C2D72049AFB02B215A0D4F5F /* Pods-Paid4Chores.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9659A656207E8837004948A1 = {
 			isa = PBXGroup;
 			children = (
 				9659A661207E8837004948A1 /* Paid4Chores */,
 				9659A660207E8837004948A1 /* Products */,
+				5C7B0B8C83AF010C99FEF721 /* Pods */,
+				C7D1474A6EC47B24ABB9304E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,8 +73,8 @@
 				9659A669207E8838004948A1 /* Assets.xcassets */,
 				9659A66E207E8838004948A1 /* Info.plist */,
 				9659A674207E88FE004948A1 /* Models */,
-				9659A676207E890E004948A1 /* Controllers */,
 				9659A675207E8906004948A1 /* Views */,
+				9659A676207E890E004948A1 /* Controllers */,
 			);
 			path = Paid4Chores;
 			sourceTree = "<group>";
@@ -88,6 +104,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		C7D1474A6EC47B24ABB9304E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71B6D443EAA4B2FEE8411CB5 /* Pods_Paid4Chores.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9659A671207E8838004948A1 /* Build configuration list for PBXNativeTarget "Paid4Chores" */;
 			buildPhases = (
+				B2B67427169D1DB3A41AA2E1 /* [CP] Check Pods Manifest.lock */,
 				9659A65B207E8837004948A1 /* Sources */,
 				9659A65C207E8837004948A1 /* Frameworks */,
 				9659A65D207E8837004948A1 /* Resources */,
+				86D3F1E3E6E1F12D62740B0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,6 +179,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86D3F1E3E6E1F12D62740B0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Paid4Chores/Pods-Paid4Chores-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Paid4Chores/Pods-Paid4Chores-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B67427169D1DB3A41AA2E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Paid4Chores-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9659A65B207E8837004948A1 /* Sources */ = {
@@ -302,15 +369,13 @@
 		};
 		9659A672207E8838004948A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00EB1F15002328E0C0387613 /* Pods-Paid4Chores.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FT544A278F;
 				INFOPLIST_FILE = Paid4Chores/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devjm.Paid4Chores;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -320,15 +385,13 @@
 		};
 		9659A673207E8838004948A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2D72049AFB02B215A0D4F5F /* Pods-Paid4Chores.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FT544A278F;
 				INFOPLIST_FILE = Paid4Chores/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devjm.Paid4Chores;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
