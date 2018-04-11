@@ -10,17 +10,30 @@ import UIKit
 import RealmSwift
 
 class ViewController: UIViewController {
-
+    
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func addChildTapped(_ sender: UIBarButtonItem) {
+        
+        print("addChildTapped")
+        
+        let newChild = Child()
+        newChild.name = "Jimmy"
+        newChild.payment = 0.0
+        
+        do {
+            try realm.write {
+                realm.add(newChild)
+            }
+        } catch {
+            print("Error saving: \(error)")
+        }
+        
     }
-
-
 }
 
