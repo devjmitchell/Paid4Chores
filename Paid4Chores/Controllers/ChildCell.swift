@@ -12,5 +12,6 @@ import RealmSwift
 class ChildCell: UITableViewCell {
     
     @IBOutlet weak var childNameLabel: UILabel!
+    @IBOutlet weak var paymentLabel: UIButton!
     
 }

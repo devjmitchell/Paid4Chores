@@ -36,10 +36,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbc-PD-gKs">
+                                                    <rect key="frame" x="317" y="24" width="40" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="$5.25"/>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="childNameLabel" destination="qgy-XX-LIV" id="o7O-ds-epX"/>
+                                            <outlet property="paymentLabel" destination="Bbc-PD-gKs" id="Z5k-nx-oW0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

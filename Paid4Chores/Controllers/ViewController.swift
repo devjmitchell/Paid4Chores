@@ -69,6 +69,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
         if let child = children?[indexPath.row] {
             cell.childNameLabel.text = child.name
+            cell.paymentLabel.setTitle(String(child.payment), for: .normal) // = child.payment
         }
         
         return cell
