@@ -10,8 +10,12 @@ import UIKit
 import RealmSwift
 
 class ViewController: UIViewController {
-    
+
     let realm = try! Realm()
+    
+//    var children = Results<Child>.self // [Child]()
+//    let children = [Child]()
+    var children: Results<Child>?
     
     let testArray = ["One", "Two", "Three"]
     
@@ -19,6 +23,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadChildren()
     }
 
     @IBAction func addChildTapped(_ sender: UIBarButtonItem) {
@@ -44,11 +50,16 @@ class ViewController: UIViewController {
         
     }
     
+    func loadChildren() {
+        children = realm.objects(Child.self)
+        tableView.reloadData()
+    }
+    
     func saveChild(named: String) {
         
         let newChild = Child()
         newChild.name = named
-        newChild.payment = 0.0
+//        newChild.payment = 0.0
         
         do {
             try self.realm.write {
@@ -57,6 +68,7 @@ class ViewController: UIViewController {
         } catch {
             print("Error saving: \(error)")
         }
+        tableView.reloadData()
     }
     
 }
@@ -64,16 +76,21 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testArray.count
+//        return testArray.count
+//        return children?.count ?? 1
+        return children?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChildCell", for: indexPath) as! ChildCell
         
-        let childName = testArray[indexPath.row]
+//        let childName = testArray[indexPath.row]
+//        let childName = children[indexPath.row].name
+//        cell.childNameLabel.text = childName
         
-        cell.childNameLabel.text = childName
+        let child = children![indexPath.row]
+        cell.childNameLabel.text = child.name
         
         return cell
         
