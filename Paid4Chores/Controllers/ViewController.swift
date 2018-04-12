@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         children = realm.objects(Child.self)
+        tableView.separatorStyle = .none
     }
 
     @IBAction func addChildTapped(_ sender: UIBarButtonItem) {

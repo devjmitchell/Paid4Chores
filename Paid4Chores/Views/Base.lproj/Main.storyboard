@@ -29,6 +29,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Z6-sT-sfO" userLabel="Cell Background Color">
+                                                    <rect key="frame" x="5" y="5" width="365" height="69.5"/>
+                                                    <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Child Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgy-XX-LIV">
                                                     <rect key="frame" x="15" y="29" width="118" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,7 +46,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbc-PD-gKs">
-                                                    <rect key="frame" x="317" y="24" width="40" height="30"/>
+                                                    <rect key="frame" x="297" y="24" width="60" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="$5.25"/>
                                                     <connections>
@@ -45,6 +54,12 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8Z6-sT-sfO" secondAttribute="trailing" constant="5" id="V2N-tc-30Q"/>
+                                                <constraint firstAttribute="bottom" secondItem="8Z6-sT-sfO" secondAttribute="bottom" constant="5" id="aE9-lY-m5Z"/>
+                                                <constraint firstItem="8Z6-sT-sfO" firstAttribute="leading" secondItem="k81-ii-qHy" secondAttribute="leading" constant="5" id="dTZ-T4-Tuu"/>
+                                                <constraint firstItem="8Z6-sT-sfO" firstAttribute="top" secondItem="k81-ii-qHy" secondAttribute="top" constant="5" id="feO-eP-44E"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="childNameLabel" destination="qgy-XX-LIV" id="o7O-ds-epX"/>
