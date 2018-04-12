@@ -12,18 +12,17 @@ import RealmSwift
 class ViewController: UIViewController {
 
     let realm = try! Realm()
-
     var children: Results<Child>?
-
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         children = realm.objects(Child.self)
         tableView.separatorStyle = .none
     }
-
+    
+    //MARK: - Add child button/alert
+    
     @IBAction func addChildTapped(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
@@ -41,6 +40,8 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    //MARK: - Save child to Realm
+    
     func saveChild(named: String) {
         
         let newChild = Child()
@@ -55,6 +56,8 @@ class ViewController: UIViewController {
         }
         tableView.reloadData()
     }
+    
+    //MARK: - Increase payment by selecting row
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedRow = indexPath.row
@@ -75,6 +78,8 @@ class ViewController: UIViewController {
     
 }
 
+//MARK: - Table View Delegate Extension
+
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -92,12 +97,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         cell.delegate = self
-        
         return cell
-        
     }
     
 }
+
+//MARK: - Child Cell Delegate Extension
 
 extension ViewController: ChildCellDelegate {
 
@@ -118,15 +123,3 @@ extension ViewController: ChildCellDelegate {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
