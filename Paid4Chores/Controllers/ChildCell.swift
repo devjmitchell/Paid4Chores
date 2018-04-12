@@ -9,9 +9,18 @@
 import UIKit
 import RealmSwift
 
+protocol ChildCellDelegate {
+    func didTapPaymentButton()
+}
+
 class ChildCell: UITableViewCell {
     
     @IBOutlet weak var childNameLabel: UILabel!
     @IBOutlet weak var paymentLabel: UIButton!
     
+    var delegate: ChildCellDelegate?
+    
+    @IBAction func paymentButtonTapped(_ sender: UIButton) {
+        delegate?.didTapPaymentButton()
+    }
 }

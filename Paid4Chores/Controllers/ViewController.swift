@@ -72,9 +72,30 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.paymentLabel.setTitle(String(child.payment), for: .normal) // = child.payment
         }
         
+        cell.delegate = self
+        
         return cell
         
     }
     
 }
+
+extension ViewController: ChildCellDelegate {
+    
+    func didTapPaymentButton() {
+        print("paymentButtonTapped")
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 

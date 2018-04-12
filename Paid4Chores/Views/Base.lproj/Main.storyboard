@@ -40,6 +40,9 @@
                                                     <rect key="frame" x="317" y="24" width="40" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="$5.25"/>
+                                                    <connections>
+                                                        <action selector="paymentButtonTapped:" destination="qXS-yD-Lg8" eventType="touchUpInside" id="GFa-GG-jhh"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
