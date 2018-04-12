@@ -75,7 +75,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
         if let child = children?[indexPath.row] {
             cell.childNameLabel.text = child.name
-            cell.paymentLabel.setTitle(String(child.payment), for: .normal) // = child.payment
+            cell.paymentLabel.setTitle(String(child.payment), for: .normal)
         }
         
         cell.delegate = self
@@ -90,7 +90,18 @@ extension ViewController: ChildCellDelegate {
 
     func didTapPaymentButton(_ sender: ChildCell) {
         let tappedIndexPath = tableView.indexPath(for: sender)?.row
-        print("this: \(String(describing: tappedIndexPath))")
+
+        if let updateChild = children?[tappedIndexPath!] {
+            do {
+                try realm.write {
+                    updateChild.payment = 0.0
+                }
+            } catch {
+                print("Error updating: \(error)")
+            }
+        }
+        
+        tableView.reloadData()
     }
 
 }
