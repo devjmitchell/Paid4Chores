@@ -38,9 +38,11 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Child Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgy-XX-LIV">
-                                                    <rect key="frame" x="15" y="29" width="118" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgy-XX-LIV">
+                                                    <rect key="frame" x="20" y="29" width="255" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="djO-wg-FoL"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -64,12 +66,15 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="qgy-XX-LIV" firstAttribute="centerY" secondItem="k81-ii-qHy" secondAttribute="centerY" id="Eeb-YP-S3t"/>
                                                 <constraint firstAttribute="trailing" secondItem="8Z6-sT-sfO" secondAttribute="trailing" constant="5" id="V2N-tc-30Q"/>
                                                 <constraint firstAttribute="bottom" secondItem="8Z6-sT-sfO" secondAttribute="bottom" constant="5" id="aE9-lY-m5Z"/>
                                                 <constraint firstItem="8Z6-sT-sfO" firstAttribute="leading" secondItem="k81-ii-qHy" secondAttribute="leading" constant="5" id="dTZ-T4-Tuu"/>
                                                 <constraint firstItem="8Z6-sT-sfO" firstAttribute="top" secondItem="k81-ii-qHy" secondAttribute="top" constant="5" id="feO-eP-44E"/>
                                                 <constraint firstItem="Bbc-PD-gKs" firstAttribute="centerY" secondItem="k81-ii-qHy" secondAttribute="centerY" id="gdU-An-Tqn"/>
                                                 <constraint firstAttribute="trailing" secondItem="Bbc-PD-gKs" secondAttribute="trailing" constant="20" id="sHD-08-7fj"/>
+                                                <constraint firstItem="qgy-XX-LIV" firstAttribute="leading" secondItem="k81-ii-qHy" secondAttribute="leading" constant="20" id="wEs-bs-wzx"/>
+                                                <constraint firstItem="Bbc-PD-gKs" firstAttribute="leading" secondItem="qgy-XX-LIV" secondAttribute="trailing" constant="20" id="zf4-iV-EjG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
