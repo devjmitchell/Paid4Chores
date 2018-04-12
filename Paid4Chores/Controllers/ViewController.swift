@@ -86,7 +86,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
         if let child = children?[indexPath.row] {
             cell.childNameLabel.text = child.name
-            cell.paymentLabel.setTitle(String(child.payment), for: .normal)
+            let formattedPaymentLabel = String(format: "%.2f", child.payment)
+            cell.paymentLabel.setTitle("$\(formattedPaymentLabel)", for: .normal)
         }
         
         cell.delegate = self
