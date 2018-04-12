@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         
         var textField = UITextField()
         let alert = UIAlertController(title: "Add Child", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Add", style: .default) { (action) in
+        let action = UIAlertAction(title: "OK", style: .default) { (action) in
             self.saveChild(named: textField.text!)
         }
         
