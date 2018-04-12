@@ -55,6 +55,12 @@ class ViewController: UIViewController {
         tableView.reloadData()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRow = indexPath.row
+        print("Selected row: \(selectedRow)")
+        //TODO: Add didSelectRowAt functionality to add money to child's payment
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -81,11 +87,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension ViewController: ChildCellDelegate {
-    
+
     func didTapPaymentButton() {
         print("paymentButtonTapped")
+//        print(Child(value: name))
     }
-    
+
 }
 
 
