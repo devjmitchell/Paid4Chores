@@ -57,8 +57,19 @@ class ViewController: UIViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedRow = indexPath.row
-        print("Selected row: \(selectedRow)")
-        //TODO: Add didSelectRowAt functionality to add money to child's payment
+        
+        if let addToPayment = children?[selectedRow] {
+            do {
+                try realm.write {
+                    addToPayment.payment += 0.25
+                }
+            } catch {
+                print("Error updating: \(error)")
+            }
+        }
+        
+        tableView.reloadData()
+        
     }
     
 }
