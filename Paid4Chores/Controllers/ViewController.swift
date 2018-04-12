@@ -88,9 +88,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ViewController: ChildCellDelegate {
 
-    func didTapPaymentButton() {
-        print("paymentButtonTapped")
-//        print(Child(value: name))
+    func didTapPaymentButton(_ sender: ChildCell) {
+        let tappedIndexPath = tableView.indexPath(for: sender)?.row
+        print("this: \(String(describing: tappedIndexPath))")
     }
 
 }

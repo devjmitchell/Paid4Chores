@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 protocol ChildCellDelegate {
-    func didTapPaymentButton()
+    func didTapPaymentButton(_ sender: ChildCell)
 }
 
 class ChildCell: UITableViewCell {
@@ -21,6 +21,6 @@ class ChildCell: UITableViewCell {
     var delegate: ChildCellDelegate?
     
     @IBAction func paymentButtonTapped(_ sender: UIButton) {
-        delegate?.didTapPaymentButton()
+        delegate?.didTapPaymentButton(self)
     }
 }
